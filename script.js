@@ -24,7 +24,7 @@ function getData() {
       const img = document.createElement("img");
       img.setAttribute("class", "card-img-top");
       img.setAttribute("src", element.urlToImage);
-      img.setAttribute("onerror", "this.src='/img/news.jpg'");
+      img.setAttribute("onerror", "this.src='img/news.jpg'");
       const h5 = document.createElement("h5");
       h5.setAttribute("class", "card-title mb-5");
       const p1 = document.createElement("p");
