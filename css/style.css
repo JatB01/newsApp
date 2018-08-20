@@ -45,6 +45,13 @@ i {
   margin-right: 10px;
 }
 
+#menu {
+  position: sticky;
+  top: 56px;
+  z-index: 1000;
+  width: 100%;
+}
+
 body {
   background: rgb(246, 248, 249); /* Old browsers */
   background: -moz-linear-gradient(
