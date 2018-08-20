@@ -22,7 +22,8 @@ img {
 }
 
 h1,
-h4 {
+h4,
+#timenow {
   text-align: center;
 }
 
@@ -62,4 +63,16 @@ body {
 
 #hl {
   color: inherit;
+}
+
+#time {
+  position: absolute;
+  bottom: 0px;
+  right: 20px;
+  font-size: small;
+  font-style: italic;
+}
+
+#all {
+  margin-left: 8px;
 }

@@ -2,6 +2,18 @@ const APIKey = "5f7ea61110b042d3a0ad010c7c83238e";
 var url = `https://newsapi.org/v2/top-headlines?country=gb&apiKey=${APIKey}`;
 const body = document.getElementById("all");
 
+//time variables and functions
+var today = new Date();
+var GMT = function() {
+  return new Date().toGMTString().replace("GMT", "");
+};
+var now = today.toISOString();
+var time = document.getElementById("timenow");
+function setTime() {
+  time.textContent = GMT();
+  setTimeout(setTime, 500);
+}
+
 // retrives the API and creates dynamic card elements using forEach
 function getData() {
   articles = () => {
@@ -16,6 +28,7 @@ function getData() {
   };
   articles().then(post => {
     // console.log(post);
+    setTime();
     post.forEach((element, i) => {
       const div = document.createElement("div");
       div.setAttribute("class", "card my-4 mx-2");
@@ -33,12 +46,18 @@ function getData() {
       a.setAttribute("class", "btn btn-info btn-sm mt-5");
       a.setAttribute("id", "btn");
       a.setAttribute("href", element.url);
+      a.setAttribute("target", "_blank");
       const source = document.createElement("p");
       source.setAttribute("class", "source");
+      const time = document.createElement("p");
+      time.setAttribute("id", "time");
       h5.textContent = element.title.substring(0, 50) + "...";
       p1.textContent = element.description;
       a.textContent = "Full Article";
       source.textContent = element.source.name;
+      var publishedTime = new Date(element.publishedAt);
+      var Timepassed = new Date(today - publishedTime).getMinutes();
+      time.textContent = `${Timepassed} min ago`;
       body.appendChild(div);
       div.appendChild(img);
       div.appendChild(div2);
@@ -46,6 +65,7 @@ function getData() {
       // div2.appendChild(p1);
       div2.appendChild(a);
       div2.appendChild(source);
+      div2.appendChild(time);
     });
   });
 }
@@ -58,11 +78,12 @@ function clearData() {
   }
 }
 
-//esets url to selected category
+//resets url to selected category
 function changePage(evt) {
   clearData();
   url = `https://newsapi.org/v2/top-headlines?country=gb&category=${evt.target.id.toLowerCase()}&apiKey=${APIKey}`;
   getData();
+  // time.textContent = GMT;
   //   highlights selected element
   var parent = evt.target.parentElement;
   var children = parent.childNodes;
