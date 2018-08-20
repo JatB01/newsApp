@@ -34,7 +34,7 @@ function getData() {
     setTime();
     post.forEach((element, i) => {
       const div = document.createElement("div");
-      div.setAttribute("class", "card my-4 mx-2");
+      div.setAttribute("class", "card my-2 mx-2");
       const div2 = document.createElement("div");
       div2.setAttribute("class", "card-body");
       const img = document.createElement("img");
