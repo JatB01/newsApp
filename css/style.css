@@ -127,6 +127,27 @@ body {
     z-index: 1000;
     margin-bottom: 0px;
     margin-top: 10%;
-    border: black;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    background-color: #343a40;
+    color: grey;
+  }
+  a {
+    color: white;
+  }
+  a:link {
+    color: green;
+  }
+
+  a:active {
+    color: green;
+  }
+
+  a:hover {
+    color: green;
+  }
+
+  a​:visited {
+    color: green;
   }
 }
