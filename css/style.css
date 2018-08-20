@@ -138,15 +138,6 @@ body {
   a:link {
     color: white;
   }
-
-  a:active {
-    color: green;
-  }
-
-  a:hover {
-    color: green;
-  }
-
   a​:visited {
     color: green;
   }
