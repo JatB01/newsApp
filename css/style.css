@@ -77,11 +77,12 @@ body {
   background: rgba(246, 248, 249, 1) 0%;
 }
 
-#link {
+/* #link {
   position: sticky;
   top: 54px;
-}
-#hl,
+  z-index: 1000;
+} */
+
 #hd {
   color: inherit;
 }
@@ -118,9 +119,14 @@ body {
   #btn {
     margin-top: 20px;
   }
-}
 
-@media screen and (max-width: 654px) {
-}
-@media screen and (max-width: 654px) {
+  #link {
+    position: fixed;
+    width: 100%;
+    bottom: 0px;
+    z-index: 1000;
+    margin-bottom: 0px;
+    margin-top: 10%;
+    border: black;
+  }
 }
