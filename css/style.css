@@ -77,12 +77,6 @@ body {
   background: rgba(246, 248, 249, 1) 0%;
 }
 
-#link {
-  position: sticky;
-  top: 54px;
-  z-index: 1000;
-}
-
 #hd {
   color: inherit;
 }
@@ -128,8 +122,9 @@ body {
 
   #link {
     position: fixed;
+    bottom: 0;
+    z-index: 1000;
     width: 100%;
-    top: 92%;
     margin-bottom: 0px;
     padding-bottom: 20px;
     padding-top: 20px;
