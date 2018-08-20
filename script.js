@@ -4,8 +4,11 @@ const body = document.getElementById("all");
 
 //time variables and functions
 var today = new Date();
+var getDate = function() {
+  return new Date().toString();
+};
 var GMT = function() {
-  return new Date().toGMTString().replace("GMT", "");
+  return new Date().toString().substring(0, getDate().lastIndexOf("GMT"));
 };
 var now = today.toISOString();
 var time = document.getElementById("timenow");
