@@ -139,9 +139,12 @@ body {
     color: white;
   }
   a​:visited {
-    color: green;
+    color: rgb(82, 204, 82);
   }
   a:active {
-    color: green;
+    color: rgb(82, 204, 82);
+  }
+  a:hover {
+    color: rgb(82, 204, 82);
   }
 }
