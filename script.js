@@ -42,9 +42,10 @@ function getData() {
       img.setAttribute("src", element.urlToImage);
       img.setAttribute("onerror", "this.src='img/news.jpg'");
       const h5 = document.createElement("h5");
-      h5.setAttribute("class", "card-title mb-5");
+      h5.setAttribute("class", "card-title mb-1");
       const p1 = document.createElement("p");
-      p1.setAttribute("class", "card-text");
+      p1.setAttribute("class", "card-text mb-5");
+      p1.setAttribute("id", "desc");
       const a = document.createElement("a");
       a.setAttribute("class", "btn btn-info btn-sm mt-5");
       a.setAttribute("id", "btn");
@@ -54,8 +55,9 @@ function getData() {
       source.setAttribute("class", "source");
       const time = document.createElement("p");
       time.setAttribute("id", "time");
-      h5.textContent = element.title.substring(0, 50) + "...";
-      p1.textContent = element.description;
+      h5.textContent = element.title;
+      // .substring(0, 50) + "...";
+      p1.textContent = element.description.substring(0, 150) + "...";
       a.textContent = "Full Article";
       source.textContent = element.source.name;
       var publishedTime = new Date(element.publishedAt);
@@ -65,7 +67,7 @@ function getData() {
       div.appendChild(img);
       div.appendChild(div2);
       div2.appendChild(h5);
-      // div2.appendChild(p1);
+      div2.appendChild(p1);
       div2.appendChild(a);
       div2.appendChild(source);
       div2.appendChild(time);
