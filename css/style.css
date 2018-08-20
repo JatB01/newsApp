@@ -1,6 +1,6 @@
 .card {
   width: 22rem;
-  height: 30rem;
+  height: 30.5rem;
   background-color: #ddfff9;
   overflow: hidden;
 }
@@ -77,11 +77,11 @@ body {
   background: rgba(246, 248, 249, 1) 0%;
 }
 
-/* #link {
+#link {
   position: sticky;
   top: 54px;
   z-index: 1000;
-} */
+}
 
 #hd {
   color: inherit;
@@ -99,7 +99,13 @@ body {
   margin-left: 4px;
 }
 
-@media screen and (max-width: 654px) {
+.navbar {
+  position: sticky;
+  top: 0px;
+  z-index: 1000;
+}
+
+@media screen and (max-width: 779px) {
   .card {
     width: 100%;
   }
@@ -123,15 +129,16 @@ body {
   #link {
     position: fixed;
     width: 100%;
+    top: 0px;
     bottom: 0px;
-    z-index: 1000;
     margin-bottom: 0px;
-    margin-top: 10%;
-    padding-bottom: 10px;
-    padding-top: 10px;
+    margin-top: 660px;
+    padding-bottom: 20px;
+    padding-top: 20px;
     background-color: #343a40;
     color: grey;
   }
+
   a {
     color: white;
   }
@@ -139,12 +146,17 @@ body {
     color: white;
   }
   a​:visited {
-    color: rgb(82, 204, 82);
+    color: #ddfff9;
   }
   a:active {
-    color: rgb(82, 204, 82);
+    color: #ddfff9;
   }
   a:hover {
-    color: rgb(82, 204, 82);
+    color: #ddfff9;
+  }
+
+  .navbar {
+    position: relative;
+    width: 100%;
   }
 }
