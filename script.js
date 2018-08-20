@@ -43,6 +43,7 @@ function getData() {
       img.setAttribute("onerror", "this.src='img/news.jpg'");
       const IMGa = document.createElement("a");
       IMGa.setAttribute("href", element.url);
+      IMGa.setAttribute("target", "_blank");
       const h5 = document.createElement("h5");
       h5.setAttribute("class", "card-title mb-1");
       const p1 = document.createElement("p");
