@@ -43,7 +43,13 @@ function getData() {
       img.setAttribute("onerror", "this.src='img/news.jpg'");
       const IMGa = document.createElement("a");
       IMGa.setAttribute("href", element.url);
-      IMGa.setAttribute("target", "_blank");
+      IMGa.setAttribute("target", "popup");
+      IMGa.setAttribute(
+        "onclick",
+        `window.open("${
+          element.url
+        }", "popup", "width=600, height=600,scrollbars=no, resizeable=no"); return false;`
+      );
       const h5 = document.createElement("h5");
       h5.setAttribute("class", "card-title mb-1");
       const p1 = document.createElement("p");
@@ -53,7 +59,13 @@ function getData() {
       a.setAttribute("class", "btn btn-info btn-sm mt-3");
       a.setAttribute("id", "btn");
       a.setAttribute("href", element.url);
-      a.setAttribute("target", "_blank");
+      a.setAttribute("target", "popup");
+      a.setAttribute(
+        "onclick",
+        `window.open("${
+          element.url
+        }", "popup", "width=600, height=600,scrollbars=no, resizeable=no"); return false;`
+      );
       const source = document.createElement("p");
       source.setAttribute("class", "source");
       const time = document.createElement("p");
