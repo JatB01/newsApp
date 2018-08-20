@@ -31,7 +31,8 @@ img {
 
 h1,
 h4,
-#timenow {
+#timenow,
+#link {
   text-align: center;
 }
 
@@ -73,8 +74,13 @@ body {
 #link {
   text-align: center;
   margin-bottom: 12px;
+  background: rgba(246, 248, 249, 1) 0%;
 }
 
+#link {
+  position: sticky;
+  top: 54px;
+}
 #hl,
 #hd {
   color: inherit;
