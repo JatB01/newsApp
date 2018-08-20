@@ -2,6 +2,14 @@
   width: 22rem;
   height: 30rem;
   background-color: #ddfff9;
+  overflow: hidden;
+}
+
+#desc {
+  overflow: hidden;
+  position: relative;
+  line-height: 1.5em;
+  max-height: 4.5em;
 }
 
 .source {
@@ -25,6 +33,11 @@ h1,
 h4,
 #timenow {
   text-align: center;
+}
+
+h5 {
+  line-height: 1em;
+  max-height: 4em;
 }
 
 i {
